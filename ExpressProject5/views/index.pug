@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	div(id='sction', class='main')
+		for poke in Pokes
+			div(class='wrap wrap--1', draggable='true')
+				div(class='grid-container container container--1')
+					div(class='wraper')
+						p #{poke.name}
+						div(class='pokeimage')
+							img(class='poke',src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+poke._id+'.png')
